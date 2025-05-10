@@ -11,7 +11,7 @@ nav ul li {
 .intro-card {
   text-align: left;
   background-color: lavender;
-  padding: 60px;
+  padding: 200px;
 }
 
 .intro-card h1 {
@@ -24,4 +24,10 @@ nav ul li {
 
 .intro-card p {
   font-size: 1.2em;
+}
+
+.pfp {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
 }
