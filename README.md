@@ -1,4 +1,2 @@
-# Codespaces with GitHub Copilot
-Learn how to set up and use [GitHub Copilot](https://github.com/features/copilot) in your Codespace.
-
-To get started, create a new Codespace from this repo.
+# Portfolio Webpage
+A simple portfolio webpage to let you know some things about me and what I'm passionate about!
