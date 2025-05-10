@@ -1,4 +1,27 @@
-html {
-  height: 100%;
-  width: 100%;
+nav {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+}
+
+nav ul li {
+  display: inline; /* Ensure list items are inline */
+}
+
+.intro-card {
+  text-align: left;
+  background-color: lavender;
+  padding: 60px;
+}
+
+.intro-card h1 {
+  font-size: 2.5em;
+}
+
+.intro-card h2 {
+  font-size: 1.5em;
+}
+
+.intro-card p {
+  font-size: 1.2em;
 }
