@@ -1,33 +1,64 @@
-nav {
-  background-color: #333;
-  color: white;
-  padding: 10px;
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
-nav ul li {
-  display: inline; /* Ensure list items are inline */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: rgb(28, 28, 31);
+  text-align: center;
 }
 
 .intro-card {
+  border-radius: 10px;  /* Rounded corners */
   text-align: left;
-  background-color: lavender;
-  padding: 200px;
+  background-color: whitesmoke;
+  padding: 5%;
+  display: flex;
+  flex-direction: row;
+  width: 50vw; /* Card will only take up 50% of the screen width */
+  margin: 0 auto; /* Center the card horizontally*/
+  height: 50vh; /* Set height to 70% of the viewport height */
+  margin-top: 5vh;
+}
+
+.intro-card .intro-text {
+  display: flex; /* Enable flexbox for intro-text */
+  flex-direction: column; /* Arrange children vertically */
+  justify-content: space-between; /* Distribute space between h1 and h2 */
+  flex-basis: 25%; /* Each takes up 25% of the intro-card height */
+  flex-grow: 1;
+  flex-shrink: 1;
+  max-width: 50%;
+  max-height: 50%;
+}
+
+.intro-card img {
+    flex-grow: 0;
+    flex-shrink: 0;
+    aspect-ratio: 1; /* Maintain a square aspect ratio */
+    margin-right: 5%;
+    border-radius: 10px; /* Make the image rounded */
+    object-fit: cover; /* Ensure the image fills the area */
+    max-width: 50%; /* Prevent the image from exceeding 40% of the container's width */
+    max-height: 100%; /* Ensure it doesn't exceed the container's height */
 }
 
 .intro-card h1 {
-  font-size: 2.5em;
+  font-size: calc(3.5vw + 3.5vh);
+  margin: 0;
+  margin-bottom: 0.5em;
+  line-height: 1.2; /* Adjust line height for better readability */
 }
 
 .intro-card h2 {
-  font-size: 1.5em;
+  font-size: calc(2vw + 2vh);
+  font-weight: normal;
+  margin: 0;
+  line-height: 1.2; /* Adjust line height for better readability */
 }
 
-.intro-card p {
-  font-size: 1.2em;
+nav {
+  padding: 0.5em;
+  margin-top: 2em; /* Add spacing between nav and intro-card */
 }
 
-.pfp {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-}
+nav ul li {
+  display: inline; /* Ensure list items are inline (horizontal */
