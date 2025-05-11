@@ -1,28 +1,47 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@400;700&family=Lora:wght@400;700&display=swap');
 
+/* Global Styles */
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Lora', serif; /* Use Lora for body text */
   background-color: rgb(28, 28, 31);
   text-align: center;
+  color: rgb(50, 50, 50);
+  background-image: linear-gradient(rgba(28, 28, 31, 0.3), rgba(28, 28, 31, 0.3)), url('img/rappahannock_river.jpeg'); /* Reduce opacity of the overlay */
+  background-size: cover; /* Ensure the image covers the entire viewport */
+  background-repeat: no-repeat;
+  height: 100vh;
 }
 
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Intro Card Styles */
 .intro-card {
-  border-radius: 10px;  /* Rounded corners */
+  border-radius: 35px; /* Rounded corners */
   text-align: left;
-  background-color: whitesmoke;
-  padding: 5%;
+  background: linear-gradient(145deg, #ffffff, rgb(233, 231, 228)); /* Subtle gradient background */
+  padding: 6%; /* Increase padding for better spacing */
   display: flex;
   flex-direction: row;
-  width: 50vw; /* Card will only take up 50% of the screen width */
-  margin: 0 auto; /* Center the card horizontally*/
+  width: 50vw; /* Card takes up 50% of the screen width */
+  margin: 0 auto; /* Center the card horizontally */
   height: 50vh; /* Set height to 70% of the viewport height */
   margin-top: 5vh;
+  border: 2px solid rgba(0, 0, 0, 0.1); /* Light border */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.1); /* Polished shadow */
 }
 
 .intro-card .intro-text {
   display: flex; /* Enable flexbox for intro-text */
   flex-direction: column; /* Arrange children vertically */
-  justify-content: space-between; /* Distribute space between h1 and h2 */
   flex-basis: 25%; /* Each takes up 25% of the intro-card height */
   flex-grow: 1;
   flex-shrink: 1;
@@ -31,34 +50,78 @@ body {
 }
 
 .intro-card img {
-    flex-grow: 0;
-    flex-shrink: 0;
-    aspect-ratio: 1; /* Maintain a square aspect ratio */
-    margin-right: 5%;
-    border-radius: 10px; /* Make the image rounded */
-    object-fit: cover; /* Ensure the image fills the area */
-    max-width: 50%; /* Prevent the image from exceeding 40% of the container's width */
-    max-height: 100%; /* Ensure it doesn't exceed the container's height */
+  animation: fadeIn 2s ease-out; /* Fade-in animation */
+  flex-grow: 0;
+  flex-shrink: 0;
+  aspect-ratio: 1; /* Maintain a square aspect ratio */
+  margin-right: 5%;
+  border-radius: 20px; /* Rounded image */
+  object-fit: cover; /* Ensure the image fills the area */
+  max-width: 50%; /* Prevent the image from exceeding 50% of the container's width */
+  max-height: 100%; /* Ensure it doesn't exceed the container's height */
+  border: 3px solid rgba(255, 255, 255, 0.8); /* Light border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transition */
 }
 
+img:hover {
+  transform: scale(1.03); /* Slightly enlarge the image on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+}
+
+/* Typography */
 .intro-card h1 {
-  font-size: calc(3.5vw + 3.5vh);
+  font-family: 'Playfair Display', serif; /* Elegant font for h1 */
+  font-size: calc(3.5vw + 3.5vh); /* Responsive font size */
   margin: 0;
   margin-bottom: 0.5em;
-  line-height: 1.2; /* Adjust line height for better readability */
+  line-height: 1.2; /* Better readability */
+  font-weight: bold; /* Bold text */
+  text-shadow: none; /* No shadow for simplicity */
+  animation: fadeIn 2s ease-out; /* Fade-in animation */
 }
 
 .intro-card h2 {
-  font-size: calc(2vw + 2vh);
+  font-size: calc(2vw + 2vh); /* Responsive font size */
   font-weight: normal;
   margin: 0;
-  line-height: 1.2; /* Adjust line height for better readability */
+  line-height: 1.2; /* Better readability */
+  animation: fadeIn 1s ease-out;
+  animation-delay: 2s; /* Delayed fade-in after h1 */
+  animation-fill-mode: both; /* Keep final state after animation */
 }
 
+/* Navigation Styles */
 nav {
   padding: 0.5em;
-  margin-top: 2em; /* Add spacing between nav and intro-card */
+  margin-top: 2em; /* Spacing between nav and intro-card */
+  margin: 0 auto; /* Center the nav horizontally */
+  animation: fadeIn 1s ease-out;
+  animation-delay: 3s; /* Delayed fade-in after h2 */
+  animation-fill-mode: both; /* Keep final state after animation */
 }
 
 nav ul li {
-  display: inline; /* Ensure list items are inline (horizontal */
+  display: inline; /* Inline list items */
+  margin: 0 0.5em;
+}
+
+nav ul li a {
+  color: rgb(50, 50, 50); /* Text color */
+  text-decoration: none; /* Remove underline */
+  font-weight: normal; /* Normal font weight */
+  font-size: calc(1.8vw + 1.8vh); /* Responsive font size */
+  background: linear-gradient(145deg, #ffffff, rgb(233, 231, 228)); /* Subtle gradient */
+  padding: 0.1em 0.1em;
+  border-radius: 10px; /* Rounded corners */
+  border: 2px solid rgba(0, 0, 0, 0.1); /* Light border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  transition: box-shadow 0.3s ease, padding 0.3s ease; /* Smooth hover transition */
+}
+
+nav ul li a:hover {
+  background: linear-gradient(145deg, #ffffff, rgb(203, 199, 192)); /* Slightly darker gradient */
+  color: rgb(13, 13, 13); /* Darker text color */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+  padding: 0.15em 0.15em; /* Slightly increased padding */
+}
