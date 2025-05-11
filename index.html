@@ -7,23 +7,56 @@
 </head>
 
 <body>
-  <div class="intro-card">
+  <section class="card" id="home">
     <img src="img/pfp.jpg" alt="Profile Picture" />
     <div class="intro-text">
       <h1>Hey, I'm Jean!</h1>
       <h2>It's awesome to have you here.</h2>
     </div>
-  </div>
+  </section>
+
+  <section class="card hidden" id="about-me">
+    <h3>About Me</h3>
+    <p>
+      I'm an aspiring software engineer in her junior year at GMU's computer science program.
+      I'm passionate about frontend development and would love to use my skills to make a positive impact
+      in areas like education, philanthropy, and the environment.
+      In my free time, I love playing 2DRPGs and platformers, writing stories,
+      tending to my plants, and listening to my favorite instrumental rock band, Mogwai!
+    </p>
+  </section>
+
+  <section class="card hidden" id="skills">
+    <h3>Skills</h3>
+    <ul class="row">
+      <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" /></li>
+      <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" /></li>
+      <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" /></li>
+      <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" /></li>
+    </ul>
+    <ul class="row">
+      <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" /></li>
+      <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" /></li>
+      <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" /></li>
+    </ul>
+  </section>
 
   <nav>
     <ul>
-      <li><a href="#about-me">About Me</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#initiatives">Initiatives</a></li>
+      <li><a href="#about-me" onclick="switchSection('about-me')">About Me</a></li>
+      <li><a href="#skills" onclick="switchSection('skills')">Skills</a></li>
+      <li><a href="#projects" onclick="switchSection('projects')">Projects</a></li>
+      <li><a href="#initiatives" onclick="switchSection('initiatives')">Initiatives</a></li>
     </ul>
   </nav>
 
+  <script>
+    function switchSection(targetId) {
+      const sections = document.querySelectorAll('section.card');
+      sections.forEach(section => section.classList.add('hidden'));
+      document.getElementById(targetId).classList.remove('hidden');
+    }
+  </script>
 </body>
 </html>
 
