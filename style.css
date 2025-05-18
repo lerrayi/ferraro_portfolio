@@ -16,6 +16,7 @@ body {
   background-repeat: no-repeat;
   height: 100vh;
   overflow: hidden; /* Prevent scrollbars */
+  padding-top: 5vh;
 }
 
 /* Animations */
@@ -39,7 +40,6 @@ body {
   width: 60vw; /* Card takes up 50% of the screen width */
   margin: 0 auto; /* Center the card horizontally */
   height: 75vh; /* Set height to 70% of the viewport height */
-  margin-top: 5vh; /* Increased space from top */
   border: 2px solid rgba(0, 0, 0, 0.1); /* Light border */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.1); /* Polished shadow */
 }
