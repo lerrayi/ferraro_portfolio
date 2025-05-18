@@ -1,6 +1,10 @@
 /* Import Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@400;700&family=Lora:wght@400;700&display=swap');
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 /* Global Styles */
 body {
   font-family: 'Lora', serif; /* Use Lora for body text */
@@ -32,10 +36,10 @@ body {
   padding: 6%; /* Increase padding for better spacing */
   display: flex;
   flex-direction: row;
-  width: 50vw; /* Card takes up 50% of the screen width */
+  width: 60vw; /* Card takes up 50% of the screen width */
   margin: 0 auto; /* Center the card horizontally */
-  height: 50vh; /* Set height to 70% of the viewport height */
-  margin-top: 5vh;
+  height: 75vh; /* Set height to 70% of the viewport height */
+  margin-top: 5vh; /* Increased space from top */
   border: 2px solid rgba(0, 0, 0, 0.1); /* Light border */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.1); /* Polished shadow */
 }
@@ -45,7 +49,7 @@ body {
   .card {
     width: 98vw;
     height: auto;
-    flex-direction: row;
+    flex-direction: column;
     padding: 4%;
   }
 }
