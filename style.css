@@ -65,7 +65,7 @@ body {
   font-size: calc(1.5vw + 1.5vh);
 }
 
-.card p {
+.card p, .card ul li {
   font-size: calc(1.2vw + 1.2vh); /* Responsive font size */
 }
 
@@ -153,6 +153,10 @@ img:hover {
 
 .card#skills ul li img {
   border-radius: 20px;
+}
+
+.card#initiatives, .card#projects {
+  flex-direction: column;
 }
 
 /* Navbar styles */
